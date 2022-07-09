@@ -1,0 +1,50 @@
+.product {
+  padding: 25px;
+
+  &__title {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  &__price {
+    font-weight: lighter;
+    color: #5c5c5c;
+    margin-bottom: 0;
+  }
+  &__image {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
+  }
+  &__description {
+    line-height: 30px;
+  }
+  &__inStock {
+    color: #cae391;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  &__OutStock {
+    color: #e39191;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  &__offer {
+    background-color: #cc3200;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 5px 18px;
+    color: #ffffff;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  &__availability {
+    font-weight: bold;
+  }
+}
+
+.bg-product-image {
+  background-color: #ebebeb;
+  padding: 45px;
+}

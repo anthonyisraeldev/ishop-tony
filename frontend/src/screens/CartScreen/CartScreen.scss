@@ -1,0 +1,16 @@
+.cart-list-item:nth-child(odd) {
+  background: #dddddd;
+}
+.cart-list-item:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.cart-item {
+  align-items: center;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.remove-border {
+  border: 0px;
+}
