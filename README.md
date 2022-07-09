@@ -30,4 +30,6 @@ User:
 user: john@example.com
 password: 1234
 
+Check env.example to add local databse
+
 ---
