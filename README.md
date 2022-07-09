@@ -31,5 +31,6 @@ user: john@example.com
 password: 1234
 
 Check env.example to add local databse
+\*\* If you want use MongoDB Atlas, must be change MONGO_URI to MONGO_URI_ATLAS in db.js file
 
 ---
