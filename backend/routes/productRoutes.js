@@ -280,6 +280,12 @@ router.route("/create").post(protect, admin, createProduct);
  *      security: [{ bearerAuth: [] }]
  *      description: Delete user
  *      summary: Product updated.
+ *      parameters:
+ *        - in: path
+ *          name: productId
+ *          schema:
+ *              type: string
+ *          required: true
  *      requestBody:
  *       required: true
  *       content:
