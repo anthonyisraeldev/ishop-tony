@@ -1,36 +1,70 @@
-# ishop-tony
+![Logo](https://res.cloudinary.com/dnptsgjep/image/upload/v1657560318/ishop_nukzjg.png)
 
-Run locally:
+# Ishop
 
-1- Install the dependencies in the root folder
+MERN Ecommerce
 
-2-Then install dependencies in the "frontend" folder
+## Tech Stack 👾
 
-3- Import data to local DB: Run: npm run data:import
+**Client:** React, Redux, React bootstrap, Axios
 
-3.1- If you want to delete it: npm run data: destroy
+**Server:** Node, Express
 
-Then to run the app: npm run dev
+## Starting 🚀
 
-When you import the data you can use this data as an example to log in:
+Check [**Live demo**](https://tonyishop.herokuapp.com/).
 
-Admin
+### Pre-requirements📋
 
----
+Node 16.13.1+
 
-Admin: admin@example.com
+```
+npm install in root folder
+```
+
+```
+npm install in frontend folder
+```
+
+### Import data 🔸
+
+```
+1 - Create your Database.
+2- Check you env and add your MONGO_URI, example "mongodb://localhost:27017/databse_name"
+3- run npm run data:import
+4- npm run dev
+```
+
+## Users credentials ⚙️
+
+In **backend** folder find **data** folder and there are the users and password to Log-in
+
+👨‍💻 **Admin**:
+
+```
+Username: admin@example.com
 password: 1234
+```
 
----
+👱‍♂️ **User**:
 
-User:
-
----
-
-user: john@example.com
+```
+Username: john@example.com
 password: 1234
+```
 
-Check env.example to add local databse
-\*\* If you want use MongoDB Atlas, must be change MONGO_URI to MONGO_URI_ATLAS in db.js file
+## Author ✒️
+
+- **Anthony Terán** - [Tonydev](https://github.com/anthonyisraeldev)
 
 ---
+
+⌨️ With ❤️ by [Anthony Terán](https://github.com/anthonyisraeldev) 😊
+
+## Features
+
+- CRUD of products
+- CRUD of orders
+- Update profiles
+- Users roles
+- Paypal integration
