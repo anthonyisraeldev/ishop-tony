@@ -2,14 +2,14 @@ const swaggerOpts = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Ecommerce API",
+      title: "iShop Ecommerce",
       version: "1.0.0",
-      description: "Ecommerce API for project",
-      termsOfService: "https://smartbear.com/terms-of-use/",
+      description: "MERN Stack Ecommerce API",
+      termsOfService: "http://example.com/terms/",
       contact: {
-        name: "Api Support",
-        url: "https://swagger.io/docs/specification/api-general-info//",
-        email: "eortega@escalab.academy",
+        name: "Live demo",
+        url: "https://tonyishop.herokuapp.com/",
+        email: "anthonyisrael.dev@gmail.com",
       },
       license: {
         name: "MIT",
@@ -33,7 +33,7 @@ const swaggerOpts = {
       },
     },
   },
-  apis: ["./routes/*.js"],
+  apis: ["backend/routes/*.js"],
 };
 
 export default swaggerOpts;

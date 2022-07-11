@@ -33,6 +33,15 @@ const ProductEditScreen = ({ match, history }) => {
   const productUpdate = useSelector((state) => state.productUpdate);
   const { loadingUpdate, errorUpdate, successUpdate } = productUpdate;
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  useEffect(() => {
+    if (!userInfo) {
+      history.push("/login");
+    }
+  }, [dispatch, history, userInfo]);
+
   useEffect(() => {
     if (successUpdate) {
       dispatch({ type: PRODUCT_UPDATE_RESET });

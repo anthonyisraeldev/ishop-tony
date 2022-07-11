@@ -25,6 +25,15 @@ const ProductEditScreen = ({ history }) => {
   const productCreate = useSelector((state) => state.productCreate);
   const { loadingCreate, errorCreate, successCreate } = productCreate;
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  useEffect(() => {
+    if (!userInfo) {
+      history.push("/login");
+    }
+  }, [dispatch, history, userInfo]);
+
   useEffect(() => {
     if (successCreate) {
       dispatch({ type: PRODUCT_CREATE_RESET });
