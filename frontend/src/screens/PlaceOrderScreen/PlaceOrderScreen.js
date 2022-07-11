@@ -13,7 +13,6 @@ const PlaceOrderScreen = ({ history }) => {
   const [data, setData] = useState({});
   const cart = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.userLogin);
-  //  const { address, city, postalCode, country } = userInfo;
 
   useEffect(() => {
     if (cart.cartItems.length === 0) {
@@ -33,19 +32,6 @@ const PlaceOrderScreen = ({ history }) => {
       history.push("/login");
     }
   }, [history, userInfo]);
-
-  // const userShippingAddress = {
-  //   address,
-  //   city,
-  //   postalCode,
-  //   country,
-  // };
-
-  // if (!cart.shippingAddress.address) {
-  //   history.push("/shipping");
-  // } else if (!cart.paymentMethod) {
-  //   history.push("/payment");
-  // }
 
   //   Calculate prices
   const addDecimals = (num) => {
@@ -78,13 +64,6 @@ const PlaceOrderScreen = ({ history }) => {
   const placeOrderHandler = () => {
     dispatch(
       createOrder({
-        // orderItems: cart.cartItems,
-        // shippingAddress: cart.shippingAddress,
-        // paymentMethod: cart.paymentMethod,
-        // itemsPrice: cart.itemsPrice,
-        // shippingPrice: cart.shippingPrice,
-        // taxPrice: cart.taxPrice,
-        // totalPrice: cart.totalPrice,
         orderItems: cart.cartItems,
         shippingAddress: data,
         paymentMethod: cart.paymentMethod,
@@ -107,8 +86,6 @@ const PlaceOrderScreen = ({ history }) => {
               <p>
                 <strong>Address: </strong>
                 {data.address}, {data.city} {data.postalCode}, {data.country}
-                {/* {cart.shippingAddress.address}, {cart.shippingAddress.city}
-                {cart.shippingAddress.postalCode},{cart.shippingAddress.country} */}
               </p>
             </ListGroup.Item>
 
