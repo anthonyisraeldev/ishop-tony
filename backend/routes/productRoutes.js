@@ -21,6 +21,14 @@ router
   .put(protect, admin, updateProduct);
 router.route("/create").post(protect, admin, createProduct);
 
+//========================================
+//	Swagger docs endpoints
+//========================================
+
+//==========
+//	List of all products
+//==========
+
 /**
  * @swagger
  * /products:
