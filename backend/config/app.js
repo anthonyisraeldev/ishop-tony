@@ -14,6 +14,9 @@ dotenv.config();
 //Express
 const app = express();
 
+//Cors
+app.use(cors());
+
 //Morgan
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
