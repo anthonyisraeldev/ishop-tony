@@ -35,7 +35,7 @@ npm install in frontend folder
 4- npm run dev
 ```
 
-## Users credentials ⚙️
+## Users credentials to test in your local ⚙️
 
 In **backend** folder find **data** folder and there are the users and password to Log-in
 
