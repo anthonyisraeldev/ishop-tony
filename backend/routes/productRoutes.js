@@ -286,6 +286,7 @@ router.route("/create").post(protect, admin, createProduct);
  *          schema:
  *              type: string
  *          required: true
+ *          description: string id of product to update
  *      requestBody:
  *       required: true
  *       content:
