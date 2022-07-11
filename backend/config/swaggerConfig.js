@@ -5,7 +5,7 @@ const swaggerOpts = {
       title: "iShop Ecommerce",
       version: "1.0.0",
       description: "MERN Stack Ecommerce API",
-      termsOfService: "http://example.com/terms/",
+      termsOfService: "https://smartbear.com/terms-of-use/",
       contact: {
         name: "Live demo",
         url: "https://tonyishop.herokuapp.com/",
@@ -22,13 +22,13 @@ const swaggerOpts = {
         description: "My API Documentation Developer Server",
       },
     ],
-    security: [{ ApiKey: [] }],
+    security: [{ bearerAuth: [] }],
     components: {
       securitySchemes: {
-        ApiKey: {
-          type: "apiKey",
-          in: "header",
-          name: "Authorization",
+        bearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
         },
       },
     },

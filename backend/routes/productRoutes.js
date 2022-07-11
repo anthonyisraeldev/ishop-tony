@@ -105,6 +105,217 @@ router.route("/create").post(protect, admin, createProduct);
  *                         type: date
  *                         description: Date of update.
  *                         example:  "2022-07-09T04:14:46.096Z"
+ *       404:
+ *         description: not found
+ */
+
+//==========
+//	Create a product
+//==========
+
+/**
+ * @swagger
+ * /products/create:
+ *   post:
+ *     security: [{ bearerAuth: [] }]
+ *     summary: Create a new product.
+ *     tags: [Product]
+ *     description: Can be used to create a product.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: Product name.
+ *                 example: Galaxy s22 Ultra
+ *               price:
+ *                 type: integer
+ *                 description: Product price.
+ *                 example: 700
+ *               image:
+ *                 type: string
+ *                 description: Product image.
+ *                 example: /images/sample2.jpg
+ *               brand:
+ *                 type: string
+ *                 description: Product brand.
+ *                 example: Samsung
+ *               countInStock:
+ *                 type: integer
+ *                 description: Product stock.
+ *                 example: 99
+ *               category:
+ *                 type: string
+ *                 description: Product category.
+ *                 example: Smartphones
+ *               description:
+ *                 type: string
+ *                 description: Product description.
+ *                 example: Is a test description
+ *               offer:
+ *                 type: boolean
+ *                 description: Product offer.
+ *                 example: true
+ *     responses:
+ *       200:
+ *         description: Product creation.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                       user:
+ *                         type: string
+ *                         description: Admin user ID.
+ *                         example: 62c9004b87f1816740c9dd2d
+ *                       name:
+ *                         type: string
+ *                         description: Product name.
+ *                         example: Galaxy s22 Ultra
+ *                       image:
+ *                         type: string
+ *                         description: Product image.
+ *                         example: /images/sample1.jpg
+ *                       brand:
+ *                         type: string
+ *                         description: Product brand.
+ *                         example: Samsung
+ *                       category:
+ *                         type: string
+ *                         description: Product category.
+ *                         example: Smartphones
+ *                       offer:
+ *                         type: boolean
+ *                         description: Product offer.
+ *                         example: true
+ *                       description:
+ *                         type: string
+ *                         description: Product description.
+ *                         example: Is a test description
+ *                       rating:
+ *                         type: integer
+ *                         description: Product rating.
+ *                         example: 0
+ *                       numReviews:
+ *                         type: integer
+ *                         description: Product number of reviews.
+ *                         example: 0
+ *                       price:
+ *                         type: integer
+ *                         description: Product price.
+ *                         example:  700
+ *                       countInStock:
+ *                         type: integer
+ *                         description: Product stock.
+ *                         example: 0
+ *                       _id:
+ *                         type: string
+ *                         description: The product ID.
+ *                         example: 62cc45d10ee5298bef18e7c7
+ *                       reviews:
+ *                         type: object
+ *                         description: Product reviews.
+ *                         example: []
+ *                       createdAt:
+ *                         type: date
+ *                         description: Date of creationg.
+ *                         example:  "2022-07-09T04:14:46.096Z"
+ *                       updatedAt:
+ *                         type: date
+ *                         description: Date of update.
+ *                         example:  "2022-07-09T04:14:46.096Z"
+ *                       __v:
+ *                         type: integer
+ *                         description: Id.
+ *                         example:  1
+ */
+
+//==========
+//	Delete a product
+//==========
+
+/**
+ * @swagger
+ * /products/{productId}:
+ *  delete:
+ *      tags: [Product]
+ *      security: [{ bearerAuth: [] }]
+ *      description: Delete user
+ *      summary: Product delete.
+ *      parameters:
+ *        - in: path
+ *          name: productId
+ *          schema:
+ *              type: string
+ *          required: true
+ *          description: string id of product to delete
+ *      responses:
+ *          200:
+ *              description: Product was deleted
+ *      404:
+ *         description: not found
+ */
+
+//==========
+//	Update a product
+//==========
+
+/**
+ * @swagger
+ * /products/{productId}:
+ *  put:
+ *      tags: [Product]
+ *      security: [{ bearerAuth: [] }]
+ *      description: Delete user
+ *      summary: Product updated.
+ *      requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: Product name.
+ *                 example: Galaxy s22 Ultra TEST UPDATED
+ *               price:
+ *                 type: integer
+ *                 description: Product price.
+ *                 example: 700
+ *               image:
+ *                 type: string
+ *                 description: Product image.
+ *                 example: /images/sample2.jpg
+ *               brand:
+ *                 type: string
+ *                 description: Product brand.
+ *                 example: Samsung
+ *               countInStock:
+ *                 type: integer
+ *                 description: Product stock.
+ *                 example: 99
+ *               category:
+ *                 type: string
+ *                 description: Product category.
+ *                 example: Smartphones
+ *               description:
+ *                 type: string
+ *                 description: Product description.
+ *                 example: Is a test description
+ *               offer:
+ *                 type: boolean
+ *                 description: Product offer.
+ *                 example: true
+ *      responses:
+ *          200:
+ *              description: Product was updated
+ *      404:
+ *         description: not found
  */
 
 export default router;
