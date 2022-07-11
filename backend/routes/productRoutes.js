@@ -107,7 +107,7 @@ router.route("/create").post(protect, admin, createProduct);
  *                         example:  1
  *                       createdAt:
  *                         type: date
- *                         description: Date of creationg.
+ *                         description: Date of creation.
  *                         example:  "2022-07-09T04:14:46.096Z"
  *                       updatedAt:
  *                         type: date
@@ -230,7 +230,7 @@ router.route("/create").post(protect, admin, createProduct);
  *                         example: []
  *                       createdAt:
  *                         type: date
- *                         description: Date of creationg.
+ *                         description: Date of creation.
  *                         example:  "2022-07-09T04:14:46.096Z"
  *                       updatedAt:
  *                         type: date
