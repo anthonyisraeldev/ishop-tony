@@ -29,7 +29,7 @@ const ProductEditScreen = ({ history }) => {
   const { userInfo } = userLogin;
 
   useEffect(() => {
-    if (!userInfo) {
+    if (!userInfo.isAdmin) {
       history.push("/login");
     }
   }, [dispatch, history, userInfo]);
