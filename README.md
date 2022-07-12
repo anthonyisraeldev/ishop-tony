@@ -64,7 +64,7 @@ password: 1234
 ## Features
 
 - CRUD of products
-- CRUD of orders
-- Update profiles
+- Create, read, approve orders
+- Update profile
 - Users roles
 - Paypal integration
