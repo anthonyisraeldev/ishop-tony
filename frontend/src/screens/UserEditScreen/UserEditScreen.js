@@ -23,6 +23,15 @@ const UserEditScreen = ({ match, history }) => {
   const userUpdate = useSelector((state) => state.userUpdate);
   const { loadingUpdate, errorUpdate, successUpdate } = userUpdate;
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  useEffect(() => {
+    if (!userInfo || !userInfo.isAdmin) {
+      history.push("/login");
+    }
+  }, [dispatch, history, userInfo]);
+
   useEffect(() => {
     if (successUpdate) {
       dispatch({ type: USER_UPDATE_RESET });
