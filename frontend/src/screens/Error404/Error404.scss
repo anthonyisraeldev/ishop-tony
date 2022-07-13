@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+@media all and (min-width: 200px) {
+  /* xs */
+  .img-notfound {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto 5rem auto;
+    display: block;
+  }
+  .content-not-found {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .main-title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+  .text-description {
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
+@media all and (min-width: 576px) {
+  /* sm */
+}
+@media all and (min-width: 768px) {
+  /* md */
+}
+@media all and (min-width: 992px) {
+  /* lg */
+}
+@media all and (min-width: 1200px) {
+  /* xl */
+  .main-title {
+    font-size: 50px;
+  }
+  .text-description {
+    font-size: 20px;
+  }
+}
