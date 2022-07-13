@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import notFound from "../../assets/404.svg";
+import notFound from "../../assets/images/404.svg";
 import "./Error404.scss";
 
 const Error404 = () => {
