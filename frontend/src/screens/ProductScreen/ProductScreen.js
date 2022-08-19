@@ -52,6 +52,12 @@ const ProductScreen = ({ history, match }) => {
     history.push(`/cart/${match.params.id}?qty=${qty}`);
   };
 
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
